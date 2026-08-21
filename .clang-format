@@ -1,0 +1,27 @@
+BasedOnStyle: Microsoft
+
+IndentWidth: 4
+ContinuationIndentWidth: 4
+UseTab: Never
+
+BreakBeforeBraces: Allman
+
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: true
+AlignOperands: true
+AlignTrailingComments: true
+
+DerivePointerAlignment: false
+
+ColumnLimit: 80
+
+LambdaBodyIndentation: Signature
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortLambdasOnASingleLine: None
+
+Cpp11BracedListStyle: true
+IndentCaseLabels: false
