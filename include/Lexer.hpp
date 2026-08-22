@@ -72,6 +72,12 @@ public:
             case '}':
                 kind = TokenKind::RightBrace;
                 break;
+            case ':':
+                kind = TokenKind::Colon;
+                break;
+            case ',':
+                kind = TokenKind::Comma;
+                break;
             }
             if (kind != TokenKind::NoneKind)
             {

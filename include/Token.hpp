@@ -11,6 +11,8 @@ enum class TokenKind
     RightBracket, // ']'
     LeftBrace,    // '{'
     RightBrace,   // '}'
+    Colon,        // ':'
+    Comma,        // ','
 };
 
 struct Token

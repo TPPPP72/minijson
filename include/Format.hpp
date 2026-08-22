@@ -20,6 +20,10 @@ inline const char *getTokenKindName(TokenKind kind)
         return "LeftBrace";
     case TokenKind::RightBrace:
         return "RightBrace";
+    case TokenKind::Colon:
+        return "Colon";
+    case TokenKind::Comma:
+        return "Comma";
     }
     std::cerr << "getTokenKindName Error\n";
     std::exit(1);
