@@ -1,0 +1,2 @@
+loc:0 kind:Number content:'123' len:3
+loc:4 kind:Number content:'1.23' len:4

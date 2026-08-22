@@ -1,0 +1,5 @@
+loc:0 kind:LeftBrace content:'{' len:1
+loc:1 kind:LeftBrace content:'{' len:1
+loc:2 kind:LeftBracket content:'[' len:1
+loc:3 kind:RightBrace content:'}' len:1
+loc:4 kind:RightBracket content:']' len:1
