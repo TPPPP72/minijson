@@ -56,6 +56,30 @@ public:
                 continue;
             }
 
+            // Punctuator
+            TokenKind kind = TokenKind::NoneKind;
+            switch (source[offset])
+            {
+            case '[':
+                kind = TokenKind::LeftBracket;
+                break;
+            case ']':
+                kind = TokenKind::RightBracket;
+                break;
+            case '{':
+                kind = TokenKind::LeftBrace;
+                break;
+            case '}':
+                kind = TokenKind::RightBrace;
+                break;
+            }
+            if (kind != TokenKind::NoneKind)
+            {
+                tokens.emplace_back(source, kind, offset, 1);
+                offset += 1;
+                continue;
+            }
+
             std::cerr << "Tokenize Error at offset " << offset << " \'"
                       << source[offset] << "\'\n";
             std::exit(1);

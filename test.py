@@ -30,6 +30,7 @@ if __name__ == "__main__":
     
     tests = [
         ("123 1.23", "loc:0 kind:Number content:'123' len:3\nloc:4 kind:Number content:'1.23' len:4\n"),
+        ("{{[}]", "loc:0 kind:LeftBrace content:'{' len:1\nloc:1 kind:LeftBrace content:'{' len:1\nloc:2 kind:LeftBracket content:'[' len:1\nloc:3 kind:RightBrace content:'}' len:1\nloc:4 kind:RightBracket content:']' len:1\n")
     ]
 
     ok = all(test(exe, arg, exp, i+1) for i, (arg, exp) in enumerate(tests))

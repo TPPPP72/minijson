@@ -7,6 +7,10 @@ enum class TokenKind
 {
     NoneKind,
     Number,
+    LeftBracket,  // '['
+    RightBracket, // ']'
+    LeftBrace,    // '{'
+    RightBrace,   // '}'
 };
 
 struct Token

@@ -12,6 +12,14 @@ inline const char *getTokenKindName(TokenKind kind)
         return "NoneKind";
     case TokenKind::Number:
         return "Number";
+    case TokenKind::LeftBracket:
+        return "LeftBracket";
+    case TokenKind::RightBracket:
+        return "RightBracket";
+    case TokenKind::LeftBrace:
+        return "LeftBrace";
+    case TokenKind::RightBrace:
+        return "RightBrace";
     }
     std::cerr << "getTokenKindName Error\n";
     std::exit(1);
