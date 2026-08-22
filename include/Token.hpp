@@ -7,6 +7,7 @@ enum class TokenKind
 {
     NoneKind,
     Number,
+    String,
     LeftBracket,  // '['
     RightBracket, // ']'
     LeftBrace,    // '{'

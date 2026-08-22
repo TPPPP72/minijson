@@ -41,6 +41,18 @@ public:
                 continue;
             }
 
+            // String
+            if (source[offset] == '\"')
+            {
+                std::uint64_t len{1};
+                while (offset + len < maxlen && source[offset + len] != '\"')
+                    ++len;
+                tokens.emplace_back(source, TokenKind::String, offset + 1,
+                                    len - 1);
+                offset += len + 1;
+                continue;
+            }
+
             // Number
             if (std::isdigit(source[offset]))
             {
