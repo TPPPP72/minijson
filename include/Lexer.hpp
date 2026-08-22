@@ -14,6 +14,11 @@ public:
 
     void skipToken() noexcept { ++m_index; }
 
+    bool is(TokenKind kind) const noexcept
+    {
+        return kind == (*m_tokens)[m_index].kind;
+    }
+
     bool atEnd() const noexcept { return m_index == m_tokens->size(); }
 
 private:

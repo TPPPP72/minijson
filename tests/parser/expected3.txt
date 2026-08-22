@@ -1,0 +1,1 @@
+<Number value='123.4' />
