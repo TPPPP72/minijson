@@ -8,7 +8,7 @@ def build():
     
     print("Compiling...")
     result = subprocess.run(
-        ["g++", "-std=c++20", "main.cpp", "-o", "build/minijson"],
+        ["g++", "-Iinclude", "-std=c++20", "main.cpp", "-o", "build/minijson"],
         capture_output=True,
         text=True
     )
