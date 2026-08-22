@@ -14,6 +14,10 @@ inline const char *getTokenKindName(TokenKind kind)
         return "Number";
     case TokenKind::String:
         return "String";
+    case TokenKind::Boolean:
+        return "Boolean";
+    case TokenKind::Null:
+        return "Null";
     case TokenKind::LeftBracket:
         return "LeftBracket";
     case TokenKind::RightBracket:

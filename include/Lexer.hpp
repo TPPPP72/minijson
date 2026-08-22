@@ -68,6 +68,28 @@ public:
                 continue;
             }
 
+            // Bool
+            if (source.substr(offset, 4) == "true")
+            {
+                tokens.emplace_back(source, TokenKind::Boolean, offset, 4);
+                offset += 4;
+                continue;
+            }
+            if (source.substr(offset, 5) == "false")
+            {
+                tokens.emplace_back(source, TokenKind::Boolean, offset, 5);
+                offset += 5;
+                continue;
+            }
+
+            // Null
+            if (source.substr(offset, 4) == "null")
+            {
+                tokens.emplace_back(source, TokenKind::Null, offset, 4);
+                offset += 4;
+                continue;
+            }
+
             // Punctuator
             TokenKind kind = TokenKind::NoneKind;
             switch (source[offset])

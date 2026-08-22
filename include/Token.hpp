@@ -8,6 +8,8 @@ enum class TokenKind
     NoneKind,
     Number,
     String,
+    Boolean,
+    Null,
     LeftBracket,  // '['
     RightBracket, // ']'
     LeftBrace,    // '{'
