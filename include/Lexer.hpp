@@ -15,11 +15,27 @@ public:
 
     const Token *getToken() const noexcept { return &(*m_tokens)[m_index]; }
 
+    const Token *lookBack(unsigned n) const noexcept
+    {
+        if (n > m_index)
+            return nullptr;
+        return &(*m_tokens)[m_index - n];
+    }
+
     const Token *lookAhead(unsigned n) const noexcept
     {
         if (m_index + n > m_tokens->size() - 1)
             return nullptr;
         return &(*m_tokens)[m_index + n];
+    }
+
+    bool tryConsumeToken(TokenKind kind) noexcept
+    {
+        if (!is(kind))
+            return false;
+
+        ++m_index;
+        return true;
     }
 
     void consumeToken(TokenKind kind) noexcept

@@ -1,0 +1,26 @@
+<Object '{'>
+  <Pair>
+    <String value="name" />
+    <String value="test" />
+  </Pair>
+  <Pair>
+    <String value="version" />
+    <Number value='1.0' />
+  </Pair>
+  <Pair>
+    <String value="active" />
+    <Boolean value='true' />
+  </Pair>
+  <Pair>
+    <String value="empty" />
+    <Null value='null' />
+  </Pair>
+  <Pair>
+    <String value="count" />
+    <Number value='42' />
+  </Pair>
+  <Pair>
+    <String value="message" />
+    <String value="hello world" />
+  </Pair>
+</Object '}'>

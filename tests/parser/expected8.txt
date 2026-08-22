@@ -1,0 +1,6 @@
+<Array '['>
+  <Number value='1' />
+  <Number value='2.0' />
+  <Number value='3' />
+  <Number value='4.0' />
+</Array ']'>
