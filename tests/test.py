@@ -5,18 +5,16 @@ import os
 import platform
 import glob
 
-def test(exe, arg, expected, test_num, extra_args=None):
+def test(exe, input_file, expected_file, test_num, extra_args=None):
     if extra_args is None:
         extra_args = []
 
-    with open(arg, 'r', encoding='utf-8') as f:
-        input_content = f.read().strip()
-    
-    with open(expected, 'r', encoding='utf-8') as f:
+    with open(expected_file, 'r', encoding='utf-8') as f:
         expected_content = f.read()
-    
-    cmd = [exe, input_content] + extra_args
+
+    cmd = [exe, input_file] + extra_args
     out = subprocess.run(cmd, capture_output=True, text=True)
+    
     ok = out.stdout == expected_content and out.returncode == 0
     
     print(f"------TEST {test_num} {'OK' if ok else 'FAIL'}------")

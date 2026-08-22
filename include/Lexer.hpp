@@ -1,7 +1,9 @@
 #pragma once
 
 #include <Token.hpp>
+#include <fstream>
 #include <iostream>
+#include <sstream>
 #include <vector>
 
 class TokenViewer
@@ -30,6 +32,18 @@ class Lexer
 {
 public:
     Lexer() { tokens.reserve(4096); }
+
+    TokenViewer tokenizeFile(const char *path)
+    {
+        std::ifstream ifs(path, std::ios::in);
+        if (!ifs.is_open())
+            throw std::runtime_error("Failed to open file");
+
+        std::ostringstream ss;
+        ss << ifs.rdbuf();
+        m_source = ss.str();
+        return tokenize(m_source);
+    }
 
     TokenViewer tokenize(std::string_view source)
     {

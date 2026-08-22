@@ -6,12 +6,12 @@ int main(int argc, char *argv[])
 {
     if (argc < 3)
     {
-        std::cerr << "Usage: minijson <json> <--dump-tokens|--dump-ast>\n";
+        std::cerr << "Usage: minijson <input-file> <--dump-tokens|--dump-ast>\n";
         return 1;
     }
 
     Lexer lexer;
-    auto token_viewer = lexer.tokenize(argv[1]);
+    auto token_viewer = lexer.tokenizeFile(argv[1]);
     Parser parser{token_viewer};
 
     std::string option = argv[2];
