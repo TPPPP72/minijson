@@ -1,0 +1,4 @@
+<Pair>
+  <String value="k" />
+  <String value="v" />
+</Pair>

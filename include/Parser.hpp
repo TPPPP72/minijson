@@ -8,9 +8,29 @@ class Parser
 public:
     Parser(TokenViewer viewer) : tok(viewer) {}
 
-    Node *parse() { return parseValue(); }
+    Node *parse()
+    {
+        if (tok.is(tok.lookAhead(1), TokenKind::Colon))
+            return parsePair();
+        return parseValue();
+    }
 
 private:
+    Node *parsePair()
+    {
+        auto pair_node = new PairNode();
+
+        auto key_node   = new ValueNode(NodeKind::String);
+        key_node->token = tok.getToken();
+        tok.skipToken();
+
+        tok.consumeToken(TokenKind::Colon);
+
+        pair_node->key   = key_node;
+        pair_node->value = parseValue();
+        return pair_node;
+    }
+
     Node *parseValue()
     {
         ValueNode *val_node{nullptr};

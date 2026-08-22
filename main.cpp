@@ -1,5 +1,5 @@
-#include <Format.hpp>
 #include <Lexer.hpp>
+#include <NodeViewer.hpp>
 #include <Parser.hpp>
 
 int main(int argc, char *argv[])
@@ -25,7 +25,8 @@ int main(int argc, char *argv[])
     }
     else if (option == "--dump-ast")
     {
-        std::cout << formatValue(static_cast<ValueNode *>(parser.parse()))
-                  << '\n';
+        auto node = parser.parse();
+        NodeViewer node_viewer;
+        node_viewer.print(node);
     }
 }

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Format.hpp>
 #include <Token.hpp>
 #include <fstream>
 #include <iostream>
@@ -14,11 +15,39 @@ public:
 
     const Token *getToken() const noexcept { return &(*m_tokens)[m_index]; }
 
+    const Token *lookAhead(unsigned n) const noexcept
+    {
+        if (m_index + n > m_tokens->size() - 1)
+            return nullptr;
+        return &(*m_tokens)[m_index + n];
+    }
+
+    void consumeToken(TokenKind kind) noexcept
+    {
+        if (is(kind))
+        {
+            ++m_index;
+            return;
+        }
+
+        std::cerr << "consumeToken Error: No matched token \'"
+                  << getTokenKindName(kind) << "\'\n";
+        std::exit(1);
+    }
+
     void skipToken() noexcept { ++m_index; }
 
     bool is(TokenKind kind) const noexcept
     {
-        return kind == (*m_tokens)[m_index].kind;
+        return is(&(*m_tokens)[m_index], kind);
+    }
+
+    bool is(const Token *token, TokenKind kind) const noexcept
+    {
+        if (token)
+            return kind == token->kind;
+
+        return false;
     }
 
     bool atEnd() const noexcept { return m_index == m_tokens->size(); }
