@@ -28,7 +28,9 @@ if __name__ == "__main__":
         print(f"Error: {exe} not found. Please build first.")
         sys.exit(1)
     
-    tests = []
-    
+    tests = [
+        ("123 1.23", "loc:0 kind:Number content:'123' len:3\nloc:4 kind:Number content:'1.23' len:4\n"),
+    ]
+
     ok = all(test(exe, arg, exp, i+1) for i, (arg, exp) in enumerate(tests))
     sys.exit(0 if ok else 1)
