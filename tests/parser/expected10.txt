@@ -1,0 +1,61 @@
+<Object '{'>
+  <Pair>
+    <String value="users" />
+    <Array '['>
+      <Object '{'>
+        <Pair>
+          <String value="id" />
+          <Number value='1' />
+        </Pair>
+        <Pair>
+          <String value="name" />
+          <String value="Alice" />
+        </Pair>
+      </Object '}'>
+      <Object '{'>
+        <Pair>
+          <String value="id" />
+          <Number value='2' />
+        </Pair>
+        <Pair>
+          <String value="name" />
+          <String value="Bob" />
+        </Pair>
+      </Object '}'>
+    </Array ']'>
+  </Pair>
+  <Pair>
+    <String value="matrix" />
+    <Array '['>
+      <Array '['>
+        <Number value='1' />
+        <Number value='2' />
+        <Number value='3' />
+      </Array ']'>
+      <Array '['>
+        <Number value='4' />
+        <Number value='5' />
+        <Number value='6' />
+      </Array ']'>
+    </Array ']'>
+  </Pair>
+  <Pair>
+    <String value="mixed" />
+    <Array '['>
+      <Object '{'>
+        <Pair>
+          <String value="type" />
+          <String value="object" />
+        </Pair>
+        <Pair>
+          <String value="value" />
+          <Number value='42' />
+        </Pair>
+      </Object '}'>
+      <Array '['>
+        <String value="nested" />
+        <String value="array" />
+      </Array ']'>
+    </Array ']'>
+  </Pair>
+</Object '}'>

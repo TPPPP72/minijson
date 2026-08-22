@@ -35,6 +35,9 @@ private:
 
     Node *parseValue()
     {
+        if (tok.is(TokenKind::LeftBracket) || tok.is(TokenKind::LeftBrace))
+            return parseContainer();
+
         ValueNode *val_node{nullptr};
 
         if (tok.is(TokenKind::Number))

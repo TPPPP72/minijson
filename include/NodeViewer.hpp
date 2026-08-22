@@ -36,12 +36,8 @@ private:
         {
             auto pair_node = static_cast<PairNode *>(node);
             std::cout << formatPairBegin(indent) << '\n';
-            std::cout << formatValue(static_cast<ValueNode *>(pair_node->key),
-                                     indent + 2)
-                      << '\n';
-            std::cout << formatValue(static_cast<ValueNode *>(pair_node->value),
-                                     indent + 2)
-                      << '\n';
+            printNode(pair_node->key, indent + 2);
+            printNode(pair_node->value, indent + 2);
             std::cout << formatPairEnd(indent) << '\n';
             break;
         }

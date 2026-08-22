@@ -1,0 +1,63 @@
+<Object '{'>
+  <Pair>
+    <String value="user" />
+    <Object '{'>
+      <Pair>
+        <String value="id" />
+        <Number value='1001' />
+      </Pair>
+      <Pair>
+        <String value="active" />
+        <Boolean value='true' />
+      </Pair>
+      <Pair>
+        <String value="profile" />
+        <Object '{'>
+          <Pair>
+            <String value="name" />
+            <String value="Alex" />
+          </Pair>
+          <Pair>
+            <String value="tags" />
+            <Array '['>
+              <String value="dev" />
+              <String value="test" />
+              <Null value='null' />
+            </Array ']'>
+          </Pair>
+        </Object '}'>
+      </Pair>
+    </Object '}'>
+  </Pair>
+  <Pair>
+    <String value="stats" />
+    <Object '{'>
+      <Pair>
+        <String value="scores" />
+        <Array '['>
+          <Number value='95' />
+          <Number value='87' />
+          <Null value='null' />
+          <Number value='102' />
+        </Array ']'>
+      </Pair>
+      <Pair>
+        <String value="meta" />
+        <Object '{'>
+          <Pair>
+            <String value="valid" />
+            <Boolean value='false' />
+          </Pair>
+          <Pair>
+            <String value="checksum" />
+            <String value="abc123" />
+          </Pair>
+        </Object '}'>
+      </Pair>
+    </Object '}'>
+  </Pair>
+  <Pair>
+    <String value="config" />
+    <Null value='null' />
+  </Pair>
+</Object '}'>

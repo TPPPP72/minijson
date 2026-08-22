@@ -1,0 +1,18 @@
+{
+  "user": {
+    "id": 1001,
+    "active": true,
+    "profile": {
+      "name": "Alex",
+      "tags": ["dev", "test", null]
+    }
+  },
+  "stats": {
+    "scores": [95, 87, null, 102],
+    "meta": {
+      "valid": false,
+      "checksum": "abc123"
+    }
+  },
+  "config": null
+}
